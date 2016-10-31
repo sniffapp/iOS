@@ -63,6 +63,7 @@
 		9D7E26781DC2179000A5178B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26761DC2179000A5178B /* MenuTableViewCell.swift */; };
 		9D7E26791DC2179000A5178B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26771DC2179000A5178B /* MenuTableViewController.swift */; };
 		9D96CC081DC79093001AE8EB /* MenuUserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96CC071DC79093001AE8EB /* MenuUserProfileTableViewCell.swift */; };
+		9D96CC0C1DC79AD7001AE8EB /* NotLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96CC0B1DC79AD7001AE8EB /* NotLoggedViewController.swift */; };
 		9DA5000A1DC0B8F10087030B /* GoogleService-Info-beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DA500081DC0B8F10087030B /* GoogleService-Info-beta.plist */; };
 		9DA5000B1DC0B8F10087030B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DA500091DC0B8F10087030B /* GoogleService-Info.plist */; };
 		9DA5000D1DC0BDE40087030B /* SFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5000C1DC0BDE40087030B /* SFNetworkManager.swift */; };
@@ -149,6 +150,7 @@
 		9D7E26761DC2179000A5178B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9D7E26771DC2179000A5178B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9D96CC071DC79093001AE8EB /* MenuUserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuUserProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9D96CC0B1DC79AD7001AE8EB /* NotLoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotLoggedViewController.swift; sourceTree = "<group>"; };
 		9DA500081DC0B8F10087030B /* GoogleService-Info-beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-beta.plist"; sourceTree = "<group>"; };
 		9DA500091DC0B8F10087030B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DA5000C1DC0BDE40087030B /* SFNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFNetworkManager.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			children = (
 				9DB833961DC0A7F200D53045 /* Intro */,
 				9DA500101DC0CE550087030B /* Home */,
+				9D96CC0B1DC79AD7001AE8EB /* NotLoggedViewController.swift */,
 				9DCF6BBD1D997FF0005EB0E6 /* Managers */,
 				9D263E3E1D8838AC00340A30 /* Model */,
 				9D764E5B1D87F3BD002C7495 /* Analytics */,
@@ -692,6 +695,7 @@
 				9D2D62611D86E3D6005AB9BA /* FrameView.swift in Sources */,
 				9DFA50BA1D9D4E220043D344 /* StringExtension.swift in Sources */,
 				9DB833A21DC0A99300D53045 /* LoginViewController.swift in Sources */,
+				9D96CC0C1DC79AD7001AE8EB /* NotLoggedViewController.swift in Sources */,
 				9D174C9B1DA0308D00923B97 /* BlurBackground.swift in Sources */,
 				9D2D62651D86E3D6005AB9BA /* PKHUDSuccessView.swift in Sources */,
 				9D2D61971D86DD6D005AB9BA /* OverlayViewDelegate.swift in Sources */,

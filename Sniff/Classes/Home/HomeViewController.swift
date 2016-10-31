@@ -69,10 +69,9 @@ class HomeViewController: UIViewController {
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: menuVC)
         menuLeftNavigationController.leftSide = true
         menuLeftNavigationController.setNavigationBarHidden(true, animated: false)
-        
-        
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
     }
+
     
     override var prefersStatusBarHidden: Bool {
         return false
