@@ -12,6 +12,7 @@ class SearchItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbSubtitle: UILabel!
+    @IBOutlet weak var separatorLine: UIView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

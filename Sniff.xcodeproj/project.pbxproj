@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8ECEE4C3DE56CB7C9ED6519E /* Pods_Sniff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0399BD96FE358F5B5BD9330 /* Pods_Sniff.framework */; };
 		9D174C9B1DA0308D00923B97 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D174C9A1DA0308D00923B97 /* BlurBackground.swift */; };
+		9D1AAF7E1DC79F290028A41F /* SFLoginSignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1AAF7D1DC79F290028A41F /* SFLoginSignupManager.swift */; };
 		9D2592D91D8AE74C0061BF79 /* Dimmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2592D81D8AE74C0061BF79 /* Dimmable.swift */; };
 		9D263E401D8838FE00340A30 /* SFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D263E3F1D8838FE00340A30 /* SFUser.swift */; };
 		9D2D61571D86CBF2005AB9BA /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D61561D86CBF2005AB9BA /* BigButton.swift */; };
@@ -95,6 +96,7 @@
 /* Begin PBXFileReference section */
 		6335A44B1F3EE253D6B65E08 /* Pods-Sniff.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sniff.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sniff/Pods-Sniff.debug.xcconfig"; sourceTree = "<group>"; };
 		9D174C9A1DA0308D00923B97 /* BlurBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
+		9D1AAF7D1DC79F290028A41F /* SFLoginSignupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLoginSignupManager.swift; sourceTree = "<group>"; };
 		9D2592D81D8AE74C0061BF79 /* Dimmable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dimmable.swift; sourceTree = "<group>"; };
 		9D263E3F1D8838FE00340A30 /* SFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFUser.swift; sourceTree = "<group>"; };
 		9D2D61561D86CBF2005AB9BA /* BigButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				9DCF6BBF1D997FF0005EB0E6 /* SFRealmManager.swift */,
 				9DA5000C1DC0BDE40087030B /* SFNetworkManager.swift */,
 				9DA5000E1DC0C9A20087030B /* SFParseNetworkResponse.swift */,
+				9D1AAF7D1DC79F290028A41F /* SFLoginSignupManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				9D2D61991D86DD6D005AB9BA /* UIApplication+SafeSharedApplication.swift in Sources */,
 				9D2D61961D86DD6D005AB9BA /* OverlayView.swift in Sources */,
 				9D2D62621D86E3D6005AB9BA /* PKHUD.swift in Sources */,
+				9D1AAF7E1DC79F290028A41F /* SFLoginSignupManager.swift in Sources */,
 				9D2D62671D86E3D6005AB9BA /* WindowRootViewController.swift in Sources */,
 				9D56ED2D1DC75AFB0067E702 /* CollectionTableViewCell.swift in Sources */,
 				9DF79C2E1D8D3DC0007068D0 /* SFReachability.swift in Sources */,

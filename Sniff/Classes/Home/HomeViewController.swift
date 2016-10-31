@@ -37,13 +37,22 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onBtnSettingsClicked(_ sender: AnyObject) {
+        /*
         if SFRealmManager.userIsLoggedIn() == false {
-            presentViewController(storyboardName: "Main", storyboardID: "", prepare: nil)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let targetVC = sb.instantiateViewController(withIdentifier: "NotLoggedViewController")
+            if let vc = targetVC as? NotLoggedViewController {
+                vc.type = .menu
+                present(vc, animated: true, completion: nil)
+            }
         } else {
+        */
             present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
     //        self.setNeedsStatusBarAppearanceUpdate()
             UIApplication.shared.statusBarStyle = .lightContent
+        /*
         }
+        */
     }
     
     @IBAction func onBtnWishListClicked(_ sender: AnyObject) {
@@ -86,6 +95,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if tableView == searchTableView {
+            return 1
+        }
         return 2
     }
     
@@ -223,7 +235,7 @@ extension HomeViewController: UISearchBarDelegate {
         if hidden == true {
             searchTableView.isHidden = true
             searchBar.isHidden = true
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.6, animations: {
                 if SFReachability.isReachable() == false {
                     let noConnectionPad = SFConstants.Values.heightNoConnectionView/2
                     self.searchTableView.frame = CGRect(x: 0, y: self.view.frame.height - noConnectionPad, width: self.view.frame.width, height: self.view.frame.height + noConnectionPad)
@@ -234,7 +246,8 @@ extension HomeViewController: UISearchBarDelegate {
         } else {
             searchTableView.isHidden = false
             searchBar.isHidden = false
-            searchBarTextDidBeginEditing(searchBar)
+            searchHasResults = true
+            searchActive = true
             UIView.animate(withDuration: 0.3, animations: {
                 if SFReachability.isReachable() == false {
                     let noConnectionPad = SFConstants.Values.heightNoConnectionView/2
@@ -248,8 +261,6 @@ extension HomeViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         setSearchTableView(hidden:false)
-        searchHasResults = true
-        searchActive = true
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {

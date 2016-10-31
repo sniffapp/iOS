@@ -313,54 +313,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/SignUp/SignUpViewController.swift"
-            timestampString = "499263031.097353"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/SignUp/SignUpViewController.swift"
-            timestampString = "499263031.097353"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/SignUp/SignUpViewController.swift"
-            timestampString = "499263031.097353"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "sign(_:didDisconnectWith:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Sniff/Classes/Managers/SFNetworkManager.swift"
             timestampString = "499181585.276837"
             startingColumnNumber = "9223372036854775807"
@@ -410,7 +362,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499620467.167848"
+                  timestampString = "499626755.474531"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -425,7 +377,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499620467.170299"
+                  timestampString = "499626755.476828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -522,7 +474,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499620467.1982"
+                  timestampString = "499626755.498445"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -537,7 +489,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499620467.19996"
+                  timestampString = "499626755.500621"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "84"
@@ -672,70 +624,6 @@
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Home/MenuTableViewController.swift"
-            timestampString = "499620069.915672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Home/MenuTableViewController.swift"
-            timestampString = "499620165.639856"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Home/HomeViewController.swift"
-            timestampString = "499620485.788547"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "onBtnSettingsClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Home/HomeViewController.swift"
-            timestampString = "499620486.3428"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "onBtnSettingsClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

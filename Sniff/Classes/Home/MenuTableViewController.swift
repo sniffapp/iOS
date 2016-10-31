@@ -48,6 +48,7 @@ class HomeMenuTableViewController: UITableViewController {
             return cell
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "homeMenuTableViewCell", for: indexPath) as? HomeMenuTableViewCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             switch indexPath.row {
             case 0:
                 cell.setup(title: "My purchases", imageName: "")
@@ -60,7 +61,9 @@ class HomeMenuTableViewController: UITableViewController {
             }
             return cell
         } else {
-            return tableView.dequeueReusableCell(withIdentifier: "homeMenuLogoutTableViewCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeMenuLogoutTableViewCell", for: indexPath)
+            cell.selectionStyle = .none
+            return cell
         }
     }
     
@@ -68,6 +71,16 @@ class HomeMenuTableViewController: UITableViewController {
         
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 160
+        } else if indexPath.section == 1 {
+            return 54
+        } else {
+            return 44
+        }
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
