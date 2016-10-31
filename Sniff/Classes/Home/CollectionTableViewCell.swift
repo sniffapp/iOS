@@ -20,10 +20,12 @@ class HomeCollectionTableViewCell: UITableViewCell {
     func setup(title: String, collectionViewTag: Int) {
         lbTitle.text = title
         collectionView.tag = collectionViewTag
+        setNeedsDisplay()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         lbTitle.text = nil
     }
+    
 }

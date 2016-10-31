@@ -13,6 +13,8 @@ class HomeCollectionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var btn: UIButton!
+    
     let placeholderImage = UIImage(named:"category_placeholder")
     
     required init?(coder aDecoder: NSCoder) {
