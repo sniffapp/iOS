@@ -37,15 +37,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onBtnSettingsClicked(_ sender: AnyObject) {
-        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
-//        self.setNeedsStatusBarAppearanceUpdate()
-        UIApplication.shared.statusBarStyle = .lightContent
+        if SFRealmManager.userIsLoggedIn() == false {
+            presentViewController(storyboardName: "Main", storyboardID: "", prepare: nil)
+        } else {
+            present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
+    //        self.setNeedsStatusBarAppearanceUpdate()
+            UIApplication.shared.statusBarStyle = .lightContent
+        }
     }
     
     @IBAction func onBtnWishListClicked(_ sender: AnyObject) {
-        UIView.animate(withDuration: 0.5) { () -> Void in
-            self.setNeedsStatusBarAppearanceUpdate()
-        }
+        
     }
     
     @IBAction func onBtnSearchClicked(_ sender: AnyObject) {
@@ -233,12 +235,13 @@ extension HomeViewController: UISearchBarDelegate {
         } else {
             searchTableView.isHidden = false
             searchBar.isHidden = false
+            searchBarTextDidBeginEditing(searchBar)
             UIView.animate(withDuration: 0.3, animations: {
                 if SFReachability.isReachable() == false {
                     let noConnectionPad = SFConstants.Values.heightNoConnectionView/2
                     self.searchTableView.frame = CGRect(x: 0, y: self.topBarView.frame.height - noConnectionPad, width: self.view.frame.width, height: self.view.frame.height - self.topBarView.frame.height + noConnectionPad)
                 } else {
-                    self.searchTableView.frame.origin = CGPoint(x: 0, y: self.topBarView.frame.height)
+                    self.searchTableView.frame = CGRect(x: CGFloat(0), y: self.topBarView.frame.height, width: self.view.frame.width, height: self.view.frame.height - self.topBarView.frame.height)
                 }
             })
         }
@@ -271,7 +274,7 @@ extension HomeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var listOfItemNames: [String] = []
-        listOfItemNames = ["iPhone charger","bed"]
+        listOfItemNames = ["iPhone charger","Bed","Lamp"]
         filtered = listOfItemNames.filter({ (displayName) -> Bool in
             let tmp: NSString = displayName as NSString
             let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)

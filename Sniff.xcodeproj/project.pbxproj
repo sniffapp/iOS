@@ -60,8 +60,9 @@
 		9D7E26601DC1E43800A5178B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E265F1DC1E43800A5178B /* SignUpView.swift */; };
 		9D7E26621DC1F0E300A5178B /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26611DC1F0E300A5178B /* UITextFieldExtension.swift */; };
 		9D7E26641DC1F19B00A5178B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26631DC1F19B00A5178B /* LoginView.swift */; };
-		9D7E26781DC2179000A5178B /* HomeMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26761DC2179000A5178B /* HomeMenuTableViewCell.swift */; };
-		9D7E26791DC2179000A5178B /* HomeMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26771DC2179000A5178B /* HomeMenuTableViewController.swift */; };
+		9D7E26781DC2179000A5178B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26761DC2179000A5178B /* MenuTableViewCell.swift */; };
+		9D7E26791DC2179000A5178B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E26771DC2179000A5178B /* MenuTableViewController.swift */; };
+		9D96CC081DC79093001AE8EB /* MenuUserProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96CC071DC79093001AE8EB /* MenuUserProfileTableViewCell.swift */; };
 		9DA5000A1DC0B8F10087030B /* GoogleService-Info-beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DA500081DC0B8F10087030B /* GoogleService-Info-beta.plist */; };
 		9DA5000B1DC0B8F10087030B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DA500091DC0B8F10087030B /* GoogleService-Info.plist */; };
 		9DA5000D1DC0BDE40087030B /* SFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA5000C1DC0BDE40087030B /* SFNetworkManager.swift */; };
@@ -145,8 +146,9 @@
 		9D7E265F1DC1E43800A5178B /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		9D7E26611DC1F0E300A5178B /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		9D7E26631DC1F19B00A5178B /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		9D7E26761DC2179000A5178B /* HomeMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMenuTableViewCell.swift; sourceTree = "<group>"; };
-		9D7E26771DC2179000A5178B /* HomeMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMenuTableViewController.swift; sourceTree = "<group>"; };
+		9D7E26761DC2179000A5178B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		9D7E26771DC2179000A5178B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		9D96CC071DC79093001AE8EB /* MenuUserProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuUserProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9DA500081DC0B8F10087030B /* GoogleService-Info-beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-beta.plist"; sourceTree = "<group>"; };
 		9DA500091DC0B8F10087030B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DA5000C1DC0BDE40087030B /* SFNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFNetworkManager.swift; sourceTree = "<group>"; };
@@ -318,8 +320,9 @@
 		9DA500101DC0CE550087030B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9D7E26771DC2179000A5178B /* HomeMenuTableViewController.swift */,
-				9D7E26761DC2179000A5178B /* HomeMenuTableViewCell.swift */,
+				9D7E26771DC2179000A5178B /* MenuTableViewController.swift */,
+				9D96CC071DC79093001AE8EB /* MenuUserProfileTableViewCell.swift */,
+				9D7E26761DC2179000A5178B /* MenuTableViewCell.swift */,
 				9DA500111DC0CE5E0087030B /* HomeViewController.swift */,
 				9D56ED2A1DC75A840067E702 /* CategoryTableViewCell.swift */,
 				9D56ED2C1DC75AFB0067E702 /* CollectionTableViewCell.swift */,
@@ -647,7 +650,7 @@
 				9D2D62661D86E3D6005AB9BA /* Window.swift in Sources */,
 				9D2D618B1D86DD6D005AB9BA /* CoachMarkPosition.swift in Sources */,
 				9D2D62AB1D86E449005AB9BA /* GiFHUD.swift in Sources */,
-				9D7E26791DC2179000A5178B /* HomeMenuTableViewController.swift in Sources */,
+				9D7E26791DC2179000A5178B /* MenuTableViewController.swift in Sources */,
 				9DCA4D161D898027005F7A4C /* GifImage.swift in Sources */,
 				9DA925B01D8AB81E005E28AB /* UIViewControllerExtension.swift in Sources */,
 				9D2592D91D8AE74C0061BF79 /* Dimmable.swift in Sources */,
@@ -661,7 +664,8 @@
 				9DA5000D1DC0BDE40087030B /* SFNetworkManager.swift in Sources */,
 				9DEABA151DC7800C0074F16B /* SearchItemTableViewCell.swift in Sources */,
 				9D2D615B1D86CC39005AB9BA /* RoundMask.swift in Sources */,
-				9D7E26781DC2179000A5178B /* HomeMenuTableViewCell.swift in Sources */,
+				9D96CC081DC79093001AE8EB /* MenuUserProfileTableViewCell.swift in Sources */,
+				9D7E26781DC2179000A5178B /* MenuTableViewCell.swift in Sources */,
 				9D2D61951D86DD6D005AB9BA /* InstructionsTopView.swift in Sources */,
 				9D2D61981D86DD6D005AB9BA /* SkipViewDisplayManager.swift in Sources */,
 				9D2D61A41D86DDA5005AB9BA /* Devices.swift in Sources */,
