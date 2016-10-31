@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TRACKING_ID</key>
+	<string>UA-48467374-1</string>
+	<key>CLIENT_ID</key>
+	<string>672735175799-07jpi7dr11iq8ehlh7ps8i3131c4dtnm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.672735175799-07jpi7dr11iq8ehlh7ps8i3131c4dtnm</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.matchbyte.Sniff</string>
+	<key>PROJECT_ID</key>
+	<string>firebase-sniff</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<false/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:672735175799:ios:09c5069cc0f0a5a4</string>
+</dict>
+</plist>
