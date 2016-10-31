@@ -49,6 +49,9 @@
 		9D2D62AB1D86E449005AB9BA /* GiFHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D62A91D86E449005AB9BA /* GiFHUD.swift */; };
 		9D2D62B21D8709EE005AB9BA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D62B11D8709EE005AB9BA /* Date.swift */; };
 		9D562F2A1D881BC50004B152 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D562F291D881BC50004B152 /* linkedin-sdk.framework */; };
+		9D56ED2B1DC75A840067E702 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D56ED2A1DC75A840067E702 /* CategoryTableViewCell.swift */; };
+		9D56ED2D1DC75AFB0067E702 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D56ED2C1DC75AFB0067E702 /* CollectionTableViewCell.swift */; };
+		9D56ED2F1DC75B540067E702 /* CollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D56ED2E1DC75B540067E702 /* CollectionCollectionViewCell.swift */; };
 		9D5BCCB81D9C0C3A000A8ECA /* UIImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BCCB71D9C0C3A000A8ECA /* UIImageResize.swift */; };
 		9D6F68ED1DB61E6B0096E6CD /* SFUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6F68EC1DB61E6B0096E6CD /* SFUserDefaults.swift */; };
 		9D6FCD9E1DB0E7420066A02F /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6FCD9D1DB0E7420066A02F /* URLExtension.swift */; };
@@ -130,6 +133,9 @@
 		9D2D62A91D86E449005AB9BA /* GiFHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiFHUD.swift; sourceTree = "<group>"; };
 		9D2D62B11D8709EE005AB9BA /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9D562F291D881BC50004B152 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
+		9D56ED2A1DC75A840067E702 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		9D56ED2C1DC75AFB0067E702 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		9D56ED2E1DC75B540067E702 /* CollectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D5BCCB71D9C0C3A000A8ECA /* UIImageResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageResize.swift; sourceTree = "<group>"; };
 		9D6F68EC1DB61E6B0096E6CD /* SFUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFUserDefaults.swift; sourceTree = "<group>"; };
 		9D6FCD9D1DB0E7420066A02F /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -313,6 +319,9 @@
 				9D7E26771DC2179000A5178B /* HomeMenuTableViewController.swift */,
 				9D7E26761DC2179000A5178B /* HomeMenuTableViewCell.swift */,
 				9DA500111DC0CE5E0087030B /* HomeViewController.swift */,
+				9D56ED2A1DC75A840067E702 /* CategoryTableViewCell.swift */,
+				9D56ED2C1DC75AFB0067E702 /* CollectionTableViewCell.swift */,
+				9D56ED2E1DC75B540067E702 /* CollectionCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -664,6 +673,7 @@
 				9D2D61961D86DD6D005AB9BA /* OverlayView.swift in Sources */,
 				9D2D62621D86E3D6005AB9BA /* PKHUD.swift in Sources */,
 				9D2D62671D86E3D6005AB9BA /* WindowRootViewController.swift in Sources */,
+				9D56ED2D1DC75AFB0067E702 /* CollectionTableViewCell.swift in Sources */,
 				9DF79C2E1D8D3DC0007068D0 /* SFReachability.swift in Sources */,
 				9D2D61851D86DD6D005AB9BA /* CoachMarkArrowOrientation.swift in Sources */,
 				9D2D618E1D86DD6D005AB9BA /* CoachMarksControllerDelegate.swift in Sources */,
@@ -688,6 +698,7 @@
 				9DB833A01DC0A7F200D53045 /* SignUpViewController.swift in Sources */,
 				9D2D61911D86DD6D005AB9BA /* CoachMarkView.swift in Sources */,
 				9D7E26601DC1E43800A5178B /* SignUpView.swift in Sources */,
+				9D56ED2F1DC75B540067E702 /* CollectionCollectionViewCell.swift in Sources */,
 				9D2D61871D86DD6D005AB9BA /* CoachMarkBodyDefaultView.swift in Sources */,
 				9D2D61A51D86DDA5005AB9BA /* Theme&Style.swift in Sources */,
 				9DB8339D1DC0A7F200D53045 /* DataViewController.swift in Sources */,
@@ -698,6 +709,7 @@
 				9D764E5D1D87F3BD002C7495 /* SFAnalytics.swift in Sources */,
 				9DCFB3571D86B03F00C3D3A2 /* AppDelegate.swift in Sources */,
 				9D6F68ED1DB61E6B0096E6CD /* SFUserDefaults.swift in Sources */,
+				9D56ED2B1DC75A840067E702 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -410,7 +410,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499280778.474441"
+                  timestampString = "499606523.453315"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -425,7 +425,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499280778.476149"
+                  timestampString = "499606523.456092"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -522,7 +522,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499280778.49156"
+                  timestampString = "499606523.48288"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -537,7 +537,7 @@
                   moduleName = "Sniff-beta"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFNetworkManager.swift"
-                  timestampString = "499280778.493459"
+                  timestampString = "499606523.48536"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "84"
@@ -681,77 +681,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/RootViewController.swift"
-            timestampString = "499280752.346347"
+            filePath = "Sniff/Classes/Home/HomeViewController.swift"
+            timestampString = "499605974.14757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/RootViewController.swift"
-            timestampString = "499280823.671946"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "scrollViewDidScroll(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sniff_beta.RootViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
-                  moduleName = "Sniff-beta"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Intro/RootViewController.swift"
-                  timestampString = "499280823.681163"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "5088">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sniff_beta.RootViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
-                  moduleName = "Sniff-beta"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Intro/RootViewController.swift"
-                  timestampString = "499280823.683133"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "5768">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/RootViewController.swift"
-            timestampString = "499280826.020263"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "scrollViewDidScroll(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

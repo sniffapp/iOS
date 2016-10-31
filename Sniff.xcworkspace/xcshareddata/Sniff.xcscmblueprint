@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0F2A8756F8159835CA57D4ED7525E8C8D1AEB674",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F430BAC43CC5DF627D0FA2D6C0646A1E7537F8FD" : 9223372036854775807,
+    "0F2A8756F8159835CA57D4ED7525E8C8D1AEB674" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5534BA36-5F4B-45E7-90CE-FE7881E4ED6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F430BAC43CC5DF627D0FA2D6C0646A1E7537F8FD" : "",
+    "0F2A8756F8159835CA57D4ED7525E8C8D1AEB674" : "iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sniff",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sniff.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sniffapp\/iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0F2A8756F8159835CA57D4ED7525E8C8D1AEB674"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MatchByte\/SNIFF.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F430BAC43CC5DF627D0FA2D6C0646A1E7537F8FD"
+    }
+  ]
+}
