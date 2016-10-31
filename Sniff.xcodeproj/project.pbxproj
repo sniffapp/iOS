@@ -83,6 +83,7 @@
 		9DCFB3571D86B03F00C3D3A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCFB34A1D86B03E00C3D3A2 /* AppDelegate.swift */; };
 		9DCFB35E1D86BD2800C3D3A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCFB35D1D86BD2800C3D3A2 /* Assets.xcassets */; };
 		9DE8560E1D9A7E2200A2D0F8 /* EquatableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8560D1D9A7E2200A2D0F8 /* EquatableExtension.swift */; };
+		9DEABA151DC7800C0074F16B /* SearchItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEABA141DC7800C0074F16B /* SearchItemTableViewCell.swift */; };
 		9DF79C2C1D8D3DC0007068D0 /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79C291D8D3DC0007068D0 /* NoConnectionView.swift */; };
 		9DF79C2E1D8D3DC0007068D0 /* SFReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79C2B1D8D3DC0007068D0 /* SFReachability.swift */; };
 		9DF79C6D1D8D4B5A007068D0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79C6C1D8D4B5A007068D0 /* Reachability.m */; };
@@ -177,6 +178,7 @@
 		9DCFB3531D86B03E00C3D3A2 /* Sniff-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sniff-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DCFB35D1D86BD2800C3D3A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DE8560D1D9A7E2200A2D0F8 /* EquatableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableExtension.swift; sourceTree = "<group>"; };
+		9DEABA141DC7800C0074F16B /* SearchItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemTableViewCell.swift; sourceTree = "<group>"; };
 		9DF79C291D8D3DC0007068D0 /* NoConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		9DF79C2B1D8D3DC0007068D0 /* SFReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFReachability.swift; sourceTree = "<group>"; };
 		9DF79C6B1D8D4B5A007068D0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				9D56ED2A1DC75A840067E702 /* CategoryTableViewCell.swift */,
 				9D56ED2C1DC75AFB0067E702 /* CollectionTableViewCell.swift */,
 				9D56ED2E1DC75B540067E702 /* CollectionFirstCollectionViewCell.swift */,
+				9DEABA141DC7800C0074F16B /* SearchItemTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				9D7E265C1DC1E19F00A5178B /* UIViewExtension.swift in Sources */,
 				9DA925AC1D8A99E8005E28AB /* Utilities.swift in Sources */,
 				9DA5000D1DC0BDE40087030B /* SFNetworkManager.swift in Sources */,
+				9DEABA151DC7800C0074F16B /* SearchItemTableViewCell.swift in Sources */,
 				9D2D615B1D86CC39005AB9BA /* RoundMask.swift in Sources */,
 				9D7E26781DC2179000A5178B /* HomeMenuTableViewCell.swift in Sources */,
 				9D2D61951D86DD6D005AB9BA /* InstructionsTopView.swift in Sources */,

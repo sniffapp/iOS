@@ -14,8 +14,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var btnLocationText: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var topBarView: UIView!
+    
     var numberOfCollectionsRow: Int = 2
     var numberOfCatgeories: Int = 1
+    
+    var searchActive : Bool = false
+    var filtered:[String] = []
+    var searchHasResults = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +33,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         SFConstants.Values.statusBarHidden = false
         SFAnalytics.addScreenTracking(screenName:"Home")
+        setSearchTableView(hidden: true)
     }
     
     @IBAction func onBtnSettingsClicked(_ sender: AnyObject) {
@@ -41,7 +49,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onBtnSearchClicked(_ sender: AnyObject) {
-        
+        setSearchTableView(hidden: false)
     }
     
     @IBAction func onBtnLocationLabelClicked(_ sender: AnyObject) {
@@ -81,6 +89,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == searchTableView {
+            if filtered.count > 0 {
+                return filtered.count
+            }
+            return 1
+        }
         if section == 0 {
             return numberOfCollectionsRow
         }
@@ -88,6 +102,30 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if tableView == searchTableView {
+            if searchActive == true && searchBar.text != nil && searchBar.text! != "" {
+                if filtered.count == 0 {
+                    tableView.isScrollEnabled = false
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "noResultsCell") else { return UITableViewCell() }
+                    return cell
+                } else {
+                    guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchItemTableViewCell") as? SearchItemTableViewCell else {
+                        return UITableViewCell()
+                    }
+                    if filtered.count > indexPath.row {
+                        cell.setup(title: filtered[indexPath.row], subTitle: filtered[indexPath.row])
+                    }
+                    cell.setNeedsUpdateConstraints()
+                    return cell
+                }
+            } else if searchActive == true && searchBar.text != nil && searchBar.text! == "" {
+                tableView.isScrollEnabled = false
+                guard let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "noResultsCell") else { return UITableViewCell() }
+                return cell
+            }
+        }
+        
+        
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "homeCollectionTableViewCell") as? HomeCollectionTableViewCell else { return UITableViewCell() }
             if indexPath.row == 0 {
@@ -104,6 +142,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if tableView == searchTableView {
+            return 50
+        }
         if indexPath.section == 0 {
             return 200
         }
@@ -111,6 +152,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if tableView == searchTableView {
+            return 0
+        }
         if section == 1 {
             return 15
         }
@@ -169,71 +213,66 @@ extension HomeViewController: UISearchBarDelegate {
     func initSearchBar() {
         searchBar.backgroundImage = UIImage()
         searchBar.layer.cornerRadius = 10
-        searchTableViewStartOrigin = searchTableView.frame.origin
-        searchTableView.register(UITableViewCell.self, forCellReuseIdentifier: "noResultsCell")
+        searchTableView.frame.origin = CGPoint(x: 0, y: view.frame.height)
         searchTableView.isHidden = true
+        searchBar.showsCancelButton = true
     }
     
+    func setSearchTableView(hidden: Bool) {
+        if hidden == true {
+            searchTableView.isHidden = true
+            searchBar.isHidden = true
+            UIView.animate(withDuration: 0.3, animations: {
+                if SFReachability.isReachable() == false {
+                    let noConnectionPad = SFConstants.Values.heightNoConnectionView/2
+                    self.searchTableView.frame = CGRect(x: 0, y: self.view.frame.height - noConnectionPad, width: self.view.frame.width, height: self.view.frame.height + noConnectionPad)
+                } else {
+                    self.searchTableView.frame.origin = CGPoint(x: 0, y: self.view.frame.height)
+                }
+            })
+        } else {
+            searchTableView.isHidden = false
+            searchBar.isHidden = false
+            UIView.animate(withDuration: 0.3, animations: {
+                if SFReachability.isReachable() == false {
+                    let noConnectionPad = SFConstants.Values.heightNoConnectionView/2
+                    self.searchTableView.frame = CGRect(x: 0, y: self.topBarView.frame.height - noConnectionPad, width: self.view.frame.width, height: self.view.frame.height - self.topBarView.frame.height + noConnectionPad)
+                } else {
+                    self.searchTableView.frame.origin = CGPoint(x: 0, y: self.topBarView.frame.height)
+                }
+            })
+        }
+    }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
+        setSearchTableView(hidden:false)
         searchHasResults = true
         searchActive = true
-        searchTableView.isHidden = false
-        if searchBar.text == "" {
-            tapGesture.isEnabled = true
-        }
-        UIView.animate(withDuration: 0.2) {
-            if SFReachability.isReachable() == false {
-                let noConnectionPad = SFConstantValue.heightNoConnectionView/2
-                self.searchTableView.frame = CGRect(x: 0, y: self.topView.frame.origin.y + self.topView.frame.height - self.bottomHeightPad - noConnectionPad, width: self.searchTableView.frame.width, height: self.searchTableView.frame.height + self.bottomHeightPad + noConnectionPad)
-            } else {
-                self.searchTableView.frame = CGRect(x: 0, y: self.topView.frame.origin.y + self.topView.frame.height, width: self.searchTableView.frame.width, height: self.searchTableView.frame.height + SFConstantValue.heightNoConnectionView)
-            }
-        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchHasResults = false
-        tapGesture.isEnabled = false
         if searchBar.text == "" {
-            dismissSearchTableView()
+            setSearchTableView(hidden:true)
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchHasResults = false
         searchActive = false
-        tapGesture.isEnabled = false
         searchBar.resignFirstResponder()
         searchBar.text = ""
-        dismissSearchTableView()
+        setSearchTableView(hidden:true)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        //        searchHasResults = false
-        //        searchActive = false
         searchBar.resignFirstResponder()
-        //        dismissSearchTableView()
-    }
-    
-    func dismissSearchTableView() {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.searchTableView.frame.origin = CGPoint(x:0,y:self.view.frame.height)
-        }) { (finished) in
-            self.searchTableView.isHidden = true
-            self.searchTableView.frame.origin = self.searchTableViewStartOrigin
-        }
-        searchBar.showsCancelButton = false
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchText == "" ? (tapGesture.isEnabled = true) : (tapGesture.isEnabled = false)
-        var listOfTagsNames: [String] = []
-        for tag in SFRealmManager.getTags() {
-            listOfTagsNames.append(tag.displayName)
-        }
-        filtered = listOfTagsNames.filter({ (displayName) -> Bool in
+        var listOfItemNames: [String] = []
+        listOfItemNames = ["iPhone charger","bed"]
+        filtered = listOfItemNames.filter({ (displayName) -> Bool in
             let tmp: NSString = displayName as NSString
             let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
             return range.location != NSNotFound
