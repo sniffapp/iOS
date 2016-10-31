@@ -901,6 +901,16 @@
                                             <constraint firstAttribute="height" constant="40" id="spA-C3-8CQ"/>
                                         </constraints>
                                     </imageView>
+                                    <searchBar contentMode="redraw" placeholder="Search for an activity" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-8a-B4p">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fso-Kc-Foz"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ce3-Ln-fU9" userLabel="wishlist">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="9QO-H2-cvm"/>
@@ -985,6 +995,8 @@
                                     <constraint firstItem="nRW-Kd-sS4" firstAttribute="centerX" secondItem="YGc-dt-IEP" secondAttribute="centerX" id="0YS-uo-ngN"/>
                                     <constraint firstItem="Ce3-Ln-fU9" firstAttribute="leading" secondItem="vm1-75-xaL" secondAttribute="trailing" constant="7" id="1wc-8e-9uc"/>
                                     <constraint firstItem="Ce3-Ln-fU9" firstAttribute="centerY" secondItem="nRW-Kd-sS4" secondAttribute="centerY" id="23m-gE-SpV"/>
+                                    <constraint firstItem="UbV-8a-B4p" firstAttribute="centerY" secondItem="vm1-75-xaL" secondAttribute="centerY" id="3Qd-z1-gAJ"/>
+                                    <constraint firstItem="UbV-8a-B4p" firstAttribute="leading" secondItem="YGc-dt-IEP" secondAttribute="leading" id="4pw-YU-tRl"/>
                                     <constraint firstItem="vm1-75-xaL" firstAttribute="centerY" secondItem="nRW-Kd-sS4" secondAttribute="centerY" id="4zE-j8-fSO"/>
                                     <constraint firstAttribute="height" constant="105" id="6QA-os-F6T"/>
                                     <constraint firstItem="eLp-js-pFI" firstAttribute="centerY" secondItem="nRW-Kd-sS4" secondAttribute="centerY" id="7Z2-Xb-Rku"/>
@@ -994,6 +1006,7 @@
                                     <constraint firstItem="eLp-js-pFI" firstAttribute="leading" secondItem="YGc-dt-IEP" secondAttribute="leading" constant="10" id="dM3-Ep-xnL"/>
                                     <constraint firstAttribute="trailing" secondItem="Ce3-Ln-fU9" secondAttribute="trailing" constant="8" id="lbr-2n-6L1"/>
                                     <constraint firstItem="s2G-5E-LZJ" firstAttribute="top" secondItem="nRW-Kd-sS4" secondAttribute="bottom" constant="10" id="lvC-Yb-ymY"/>
+                                    <constraint firstItem="vm1-75-xaL" firstAttribute="leading" secondItem="UbV-8a-B4p" secondAttribute="trailing" constant="6" id="mTC-5C-Tdx"/>
                                     <constraint firstItem="fYd-IZ-vv3" firstAttribute="top" secondItem="s2G-5E-LZJ" secondAttribute="bottom" id="nSf-88-bB6"/>
                                     <constraint firstItem="fYd-IZ-vv3" firstAttribute="centerX" secondItem="YGc-dt-IEP" secondAttribute="centerX" id="szv-Zj-Q8l"/>
                                 </constraints>
@@ -1044,27 +1057,41 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-BN-VCh"/>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shop name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-BN-diC">
-                                                                        <frame key="frameInset" minY="139" width="176" height="13"/>
-                                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-BN-diC">
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="13" id="I8l-nk-7ip"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91A-LV-cRP">
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="8" id="ial-qb-crb"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="8"/>
+                                                                        <state key="normal" title="199 Bishhop Gate, London">
+                                                                            <color key="titleColor" red="0.99215686270000003" green="0.51764705879999995" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                    </button>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="top" secondItem="fGQ-h0-aIB" secondAttribute="top" id="8c7-W4-xsn"/>
-                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="leading" secondItem="fGQ-h0-aIB" secondAttribute="leading" id="Fnf-Rv-n2y"/>
+                                                                <constraint firstItem="91A-LV-cRP" firstAttribute="leading" secondItem="Lsb-BN-diC" secondAttribute="leading" id="7Gi-Hf-V8L"/>
+                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="top" secondItem="3Vb-BN-VCh" secondAttribute="bottom" constant="-27" id="Fba-NT-d8y"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Lsb-BN-diC" secondAttribute="trailing" constant="5" id="Fj8-g5-rJ5"/>
+                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="leading" secondItem="fGQ-h0-aIB" secondAttribute="leading" constant="5" id="Fnf-Rv-n2y"/>
                                                                 <constraint firstItem="3Vb-BN-VCh" firstAttribute="width" secondItem="fGQ-h0-aIB" secondAttribute="width" id="HOT-Q2-yIa"/>
+                                                                <constraint firstItem="91A-LV-cRP" firstAttribute="top" secondItem="Lsb-BN-diC" secondAttribute="bottom" constant="1" id="IHh-nj-hQX"/>
+                                                                <constraint firstItem="91A-LV-cRP" firstAttribute="trailing" secondItem="Lsb-BN-diC" secondAttribute="trailing" id="QlF-SQ-lgi"/>
                                                                 <constraint firstItem="3Vb-BN-VCh" firstAttribute="leading" secondItem="fGQ-h0-aIB" secondAttribute="leading" id="RDc-XA-0Uj"/>
                                                                 <constraint firstItem="3Vb-BN-VCh" firstAttribute="height" secondItem="fGQ-h0-aIB" secondAttribute="height" id="bnn-PO-WAm"/>
-                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="width" secondItem="fGQ-h0-aIB" secondAttribute="width" id="fsN-VD-0Fe"/>
-                                                                <constraint firstItem="Lsb-BN-diC" firstAttribute="height" secondItem="fGQ-h0-aIB" secondAttribute="height" id="i8o-VT-N67"/>
                                                                 <constraint firstItem="3Vb-BN-VCh" firstAttribute="top" secondItem="fGQ-h0-aIB" secondAttribute="top" id="sVl-k1-2Sb"/>
                                                             </constraints>
                                                             <size key="customSize" width="176" height="163"/>
                                                             <connections>
                                                                 <outlet property="backgroundImageView" destination="3Vb-BN-VCh" id="hIh-Le-9Tc"/>
+                                                                <outlet property="btn" destination="91A-LV-cRP" id="gdz-oM-d5c"/>
                                                                 <outlet property="lbTitle" destination="Lsb-BN-diC" id="odz-sD-08N"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -1165,6 +1192,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="btnLocationText" destination="lRS-8c-Ate" id="wKY-6X-zLu"/>
+                        <outlet property="searchBar" destination="UbV-8a-B4p" id="UOF-nV-rTR"/>
                         <outlet property="tableView" destination="Opg-Vr-K9Z" id="LNF-rB-A75"/>
                     </connections>
                 </viewController>
