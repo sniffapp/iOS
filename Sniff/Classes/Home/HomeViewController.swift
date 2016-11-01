@@ -120,6 +120,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 if filtered.count == 0 {
                     tableView.isScrollEnabled = false
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "noResultsCell") else { return UITableViewCell() }
+                    cell.selectionStyle = .none
+                    cell.isUserInteractionEnabled = false
                     return cell
                 } else {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchItemTableViewCell") as? SearchItemTableViewCell else {
@@ -134,6 +136,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             } else if searchActive == true && searchBar.text != nil && searchBar.text! == "" {
                 tableView.isScrollEnabled = false
                 guard let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "noResultsCell") else { return UITableViewCell() }
+                cell.selectionStyle = .none
+                cell.isUserInteractionEnabled = false
                 return cell
             }
         }
@@ -244,6 +248,7 @@ extension HomeViewController: UISearchBarDelegate {
                 }
             })
         } else {
+            searchBar.becomeFirstResponder()
             searchTableView.isHidden = false
             searchBar.isHidden = false
             searchHasResults = true
