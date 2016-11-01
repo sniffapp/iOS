@@ -83,15 +83,15 @@ class SFGeneralManager {
         //MARK: - Perform Login
         class func performLogin(email:String?, fb_token: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, password: String?, completion:@escaping (_ error:String?)->()) {
             if email != nil && (password != nil || fb_token != nil || google_token != nil || linkedin_token != nil) {
-                SFNetworkManager.Login.post(email: email!, password: password, fb_token: fb_token, google_token: google_token, linkedin_token: linkedin_token, completion: { (error, value) in
+                SFNetworkManager.Login.post(email: email!, password: password, fb_token: fb_token, google_token: google_token, linkedin_token: linkedin_token, completion: { (error, user) in
                     SFHud.dismissLoading()
                     guard error == nil else {
                         completion(error)
                         return
                     }
-                    if user != nil {
-                        SFRealmManager.saveRealmObjectAndUpdate(object: user)
-                        SFUserDefaults.setActiveUserToken(user.token)
+                    if let loggedUser = user {
+                        SFRealmManager.saveRealmObjectAndUpdate(object: loggedUser)
+                        SFUserDefaults.setActiveUserToken(loggedUser.token)
                         completion(nil)
                     } else {
                         completion(SFConstants.Strings.Error.Login.authenticationMessage)
@@ -112,9 +112,9 @@ class SFGeneralManager {
                         completion(error)
                         return
                     }
-                    if user != nil {
-                        SFRealmManager.saveRealmObjectAndUpdate(object: user)
-                        SFUserDefaults.setActiveUserToken(user.token)
+                    if let newUser = user {
+                        SFRealmManager.saveRealmObjectAndUpdate(object: newUser)
+                        SFUserDefaults.setActiveUserToken(newUser.token)
                         completion(nil)
                     } else {
                         completion(SFConstants.Strings.Error.SignUp.genericMessage)

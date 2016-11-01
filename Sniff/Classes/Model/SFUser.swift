@@ -15,6 +15,10 @@ public class SFUser: Object {
     public dynamic var userId: String = ""
     public dynamic var email: String = ""
     public dynamic var password: String = ""
+    public dynamic var firstName: String = ""
+    public dynamic var lastName: String = ""
+    public dynamic var displayName: String = ""
+    public dynamic var createdAt: String = ""
     
     public override static func primaryKey() -> String {
         return "userId"

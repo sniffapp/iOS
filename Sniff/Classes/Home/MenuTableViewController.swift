@@ -64,7 +64,20 @@ class HomeMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                break
+            case 1:
+                break
+            case 2:
+                break
+            case 3:
+                logout()
+            default:
+                break
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -78,4 +91,26 @@ class HomeMenuTableViewController: UITableViewController {
         return .lightContent
     }
 }
+
+//MARK: - Menu Actions
+extension HomeMenuTableViewController {
+    
+    func logout() {
+        SFRealmManager.logout()
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

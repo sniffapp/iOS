@@ -44,6 +44,13 @@ class SFRealmManager {
         return getLoggedUser() != nil
     }
     
+    public class func logout() {
+        if let loggedUser = getLoggedUser() {
+            deleteRealmObject(object: loggedUser)
+            SFUserDefaults.setActiveUserToken(nil)
+        }
+    }
+    
     //MARK: - FetchResults
     public class FetchResults {
         
