@@ -95,7 +95,14 @@
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
-		</dict>
+            <key>sniff.us-west-2.elasticbeanstalk.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Choose a profile picture from your library</string>

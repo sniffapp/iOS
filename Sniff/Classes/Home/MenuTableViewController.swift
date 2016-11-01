@@ -97,6 +97,9 @@ extension HomeMenuTableViewController {
     
     func logout() {
         SFRealmManager.logout()
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let targetVC = sb.instantiateViewController(withIdentifier: "RootViewController")
+        navigationController?.setViewControllers([targetVC], animated: true)
     }
     
 }

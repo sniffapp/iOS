@@ -106,6 +106,13 @@
 				<key>NSExceptionRequiresForwardSecrecy</key>
 				<false/>
 			</dict>
+            <key>sniff.us-west-2.elasticbeanstalk.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
 		</dict>
 	</dict>
 	<key>LIAppId</key>
