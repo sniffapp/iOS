@@ -53,7 +53,7 @@ class SignUpViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
     
     //MARK: - SignUp Buttons - Facebook
     @IBAction func onBtnFacebookClicked(_ sender: AnyObject) {
-        SFLoginSignupManager.onBtnFacebookClicked(isLogin: false, viewController: self) { (error) in
+        SFGeneralManager.SFLoginSignupManager.onBtnFacebookClicked(isLogin: false, viewController: self) { (error) in
             if error != nil {
                 SFAlertMessage.alertCancel(title: SFConstants.Strings.Error.Login.authenticationTitle, message: error, cancelTitle: "Ok", viewController: self)
             } else {
@@ -64,7 +64,7 @@ class SignUpViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
     
     //MARK: - SignUp Buttons - Linkedin
     @IBAction func onLinkedinBtnClicked(_ sender: AnyObject) {
-        SFLoginSignupManager.onLinkedinBtnClicked(isLogin: false, completion: { (error) in
+        SFGeneralManager.SFLoginSignupManager.onLinkedinBtnClicked(isLogin: false, completion: { (error) in
             if error != nil {
                 SFAlertMessage.alertCancel(title: SFConstants.Strings.Error.Login.authenticationTitle, message: error, cancelTitle: "Ok", viewController: self)
             } else {
@@ -79,7 +79,7 @@ class SignUpViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
     }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Swift.Error!) {
-        SFLoginSignupManager.sign(isLogin: false, signIn, didSignInFor: user, withError: error) { (error) in
+        SFGeneralManager.SFLoginSignupManager.sign(isLogin: false, signIn, didSignInFor: user, withError: error) { (error) in
             if error != nil {
                 SFAlertMessage.alertCancel(title: SFConstants.Strings.Error.Login.authenticationTitle, message: error, cancelTitle: "Ok", viewController: self)
             } else {
@@ -113,7 +113,7 @@ class SignUpViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         }
         if emailTyped != "" && emailTyped != " " && emailTyped.isEmailValid {
             if pswTyped != "" && pswTyped != " " && pswTyped.isPasswordValid() {
-                SFLoginSignupManager.performSignUp(email: emailTyped, password: pswTyped, completion: { (error) in
+                SFGeneralManager.SFLoginSignupManager.performSignUp(email: emailTyped, password: pswTyped, completion: { (error) in
                     if error != nil {
                         SFAlertMessage.alertCancel(title: SFConstants.Strings.Error.Login.authenticationTitle, message: error, cancelTitle: "Ok", viewController: self)
                     } else {
