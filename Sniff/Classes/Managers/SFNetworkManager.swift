@@ -52,18 +52,7 @@ class SFNetworkManager {
                     }
                     completion(SFConstants.Strings.Error.Login.authenticationMessage, nil)
                 } else {
-                    if let errorString = response.result.error?.localizedDescription {
-                        completion(errorString, nil)
-                    } else {
-                        let err = response.result.debugDescription
-                        if err.characters.count > 10 {
-                            let lo = err.index(err.startIndex, offsetBy: 9)
-                            let realError = err.substring(from: lo)
-                            completion(realError, nil)
-                        } else {
-                            completion(SFConstants.Strings.Error.Login.authenticationMessage, nil)
-                        }
-                    }
+                    completion(SFConstants.Strings.Error.Login.authenticationMessage, nil)
                 }
                 
             }
