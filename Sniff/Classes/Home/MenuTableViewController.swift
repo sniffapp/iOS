@@ -99,7 +99,11 @@ extension HomeMenuTableViewController {
         SFRealmManager.logout()
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let targetVC = sb.instantiateViewController(withIdentifier: "RootViewController")
-        navigationController?.setViewControllers([targetVC], animated: true)
+        if let homeNav = self.presentingViewController as? UINavigationController {
+            dismiss(animated: true, completion: {
+                homeNav.setViewControllers([targetVC], animated: false)
+            })
+        }
     }
     
 }

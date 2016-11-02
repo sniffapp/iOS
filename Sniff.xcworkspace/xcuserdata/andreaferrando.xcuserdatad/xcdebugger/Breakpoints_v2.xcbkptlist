@@ -345,14 +345,126 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sniff/Classes/Intro/Login/LoginViewController.swift"
-            timestampString = "499772077.095391"
+            filePath = "Sniff/Classes/Managers/SFNetworkManager.swift"
+            timestampString = "499799252.684398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "goToNextPage()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "post(email:password:fb_userId:google_userId:linkedin_token:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sniff/Classes/Managers/SFNetworkManager.swift"
+            timestampString = "499799255.314429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "post(email:password:fb_userId:google_userId:linkedin_token:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sniff/Classes/Managers/SFLoginSignupManager.swift"
+            timestampString = "499799390.787714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "performSignUp(email:fb_userId:google_userId:linkedin_token:password:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sniff/Classes/Managers/SFLoginSignupManager.swift"
+            timestampString = "499799398.062765"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "performSignUp(email:fb_userId:google_userId:linkedin_token:password:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sniff/Classes/Managers/SFLoginSignupManager.swift"
+            timestampString = "499799400.498809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "performSignUp(email:fb_userId:google_userId:linkedin_token:password:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sniff/Classes/Managers/SFLoginSignupManager.swift"
+            timestampString = "499799402.97104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "performSignUp(email:fb_userId:google_userId:linkedin_token:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Sniff_beta.SFGeneralManager.SFLoginSignupManager.performSignUp (email : Swift.Optional&lt;Swift.String&gt;, fb_userId : Swift.Optional&lt;Swift.String&gt;, google_userId : Swift.Optional&lt;Swift.String&gt;, linkedin_token : Swift.Optional&lt;Swift.String&gt;, password : Swift.Optional&lt;Swift.String&gt;, completion : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Sniff-beta"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFLoginSignupManager.swift"
+                  timestampString = "499799546.796769"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "2004">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Sniff_beta.SFGeneralManager.SFLoginSignupManager.(performSignUp (email : Swift.Optional&lt;Swift.String&gt;, fb_userId : Swift.Optional&lt;Swift.String&gt;, google_userId : Swift.Optional&lt;Swift.String&gt;, linkedin_token : Swift.Optional&lt;Swift.String&gt;, password : Swift.Optional&lt;Swift.String&gt;, completion : (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Sniff-beta"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreaferrando/Developer/MatchByte/Sniff/iOS/Sniff/Classes/Managers/SFLoginSignupManager.swift"
+                  timestampString = "499799546.79799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

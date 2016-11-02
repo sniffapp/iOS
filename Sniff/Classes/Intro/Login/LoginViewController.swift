@@ -93,17 +93,14 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate,GIDSignInDelega
          // Perform any operations when the user disconnects from app here.
     }
     
-    
     func goToNextPage() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let targetVC: UIViewController = sb.instantiateViewController(withIdentifier: "HomeViewController")
-        dismiss(animated: false) {
-            DispatchQueue.main.async {
-                self.navigationController?.pushViewController(targetVC, animated: true)
-            }
+        if let rootNav = self.presentingViewController as? UINavigationController {
+            rootNav.setViewControllers([targetVC], animated: true)
         }
+        dismiss(animated: true)
     }
-    
     
     @IBAction func onBtnLoginClicked(_ sender: AnyObject) {
         guard let emailTyped = tfEmail.text, let pswTyped = tfPassword.text else { return }

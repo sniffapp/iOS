@@ -15,13 +15,14 @@ class SFParseNetworkResponse {
         class func parsePostNewUser(value: Any) -> SFUser? {
             if let json = value as? NSDictionary {
                 let user = SFUser()
-                if json["fb_token"] != nil && json["fb_token"]! is String && json["fb_token"]! as! String != "" {
-                    user.token = json["fb_token"] as! String
-                } else if json["google_token"] != nil && json["google_token"]! is String && json["google_token"]! as! String != "" {
-                    user.token = json["google_token"] as! String
-                } else if json["linkedin_token"] != nil && json["linkedin_token"]! is String && json["linkedin_token"]! as! String != "" {
-                    user.token = json["linkedin_token"] as! String
-                } else if json["token"] != nil && json["token"]! is String && json["token"]! as! String != "" {
+//                if json["fb_token"] != nil && json["fb_token"]! is String && json["fb_token"]! as! String != "" {
+//                    user.token = json["fb_token"] as! String
+//                } else if json["google_token"] != nil && json["google_token"]! is String && json["google_token"]! as! String != "" {
+//                    user.token = json["google_token"] as! String
+//                } else if json["linkedin_token"] != nil && json["linkedin_token"]! is String && json["linkedin_token"]! as! String != "" {
+//                    user.token = json["linkedin_token"] as! String
+//                } else
+                if json["token"] != nil && json["token"]! is String && json["token"]! as! String != "" {
                     user.token = json["token"] as! String
                 }
                 if let password = json["password"] as? String {

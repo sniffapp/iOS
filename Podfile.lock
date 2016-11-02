@@ -67,6 +67,7 @@ PODS:
   - SwiftFetchedResultsController (4.0.4):
     - RBQFetchedResultsController (>= 4.0.4)
     - RealmSwift (>= 1.0.0)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.1)
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - SideMenu
   - SVWebViewController
   - SwiftFetchedResultsController
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   Realm:
@@ -136,7 +138,8 @@ SPEC CHECKSUMS:
   SideMenu: f179260f85c68ed9b283b4a505600f2e6cbdfb10
   SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
   SwiftFetchedResultsController: 4439e56787c27a5407ab5cc4dcab339478f24284
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: c1f0073ca8d5eb0522c09426040fce558ce71418
+PODFILE CHECKSUM: 754bb7176c5268751e11a63381e13e963b2d3adf
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

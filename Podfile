@@ -20,5 +20,6 @@ pod 'FBSDKShareKit'
     pod 'SABlurImageView'
     pod 'Google/Analytics'
     pod 'SideMenu'
+    pod 'SwiftyJSON'
 end
 

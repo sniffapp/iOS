@@ -91,14 +91,14 @@ class SignUpViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!, withError error: Swift.Error!) {
         // Perform any operations when the user disconnects from app here.
     }
+    
     func goToNextPage() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let targetVC: UIViewController = sb.instantiateViewController(withIdentifier: "HomeViewController")
-        dismiss(animated: false) {
-            DispatchQueue.main.async {
-                self.navigationController?.pushViewController(targetVC, animated: true)
-            }
+        if let rootNav = self.presentingViewController as? UINavigationController {
+            rootNav.setViewControllers([targetVC], animated: true)
         }
+        dismiss(animated: true)
     }
 
     @IBAction func onBtnSignUpClicked(_ sender: AnyObject) {

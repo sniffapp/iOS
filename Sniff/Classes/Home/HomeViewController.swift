@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onBtnSettingsClicked(_ sender: AnyObject) {
-        /*
+        
         if SFRealmManager.userIsLoggedIn() == false {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let targetVC = sb.instantiateViewController(withIdentifier: "NotLoggedViewController")
@@ -46,13 +46,9 @@ class HomeViewController: UIViewController {
                 present(vc, animated: true, completion: nil)
             }
         } else {
-        */
             present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
-    //        self.setNeedsStatusBarAppearanceUpdate()
             UIApplication.shared.statusBarStyle = .lightContent
-        /*
         }
-        */
     }
     
     @IBAction func onBtnWishListClicked(_ sender: AnyObject) {

@@ -24,14 +24,14 @@ class SFNetworkManager {
          *   - linkedin_token: if logging in via Linkedin
          *   - completion: error(if exists) and value(response object: -> SFUser)
          */
-        class func post(email: String, password: String?, fb_token: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, completion: @escaping(_ error:String?, _ user:SFUser?) ->()) {
+        class func post(email: String, password: String?, fb_userId: String? = nil, fb_token: String? = nil, google_userId: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, completion: @escaping(_ error:String?, _ user:SFUser?) ->()) {
             let parameters: [String:String]!
             if let password = password {
                 parameters = ["email":email,"password":password]
-            } else if let fb_token = fb_token {
-                parameters = ["email":email,"fb_token":fb_token]
-            } else if let google_token = google_token {
-                parameters = ["email":email,"google_token":google_token]
+            } else if let fb_token = fb_token, let fb_userId = fb_userId {
+                parameters = ["email":email,"fb_token":fb_token,"fb_userId":fb_userId]
+            } else if let google_token = google_token, let google_userId = google_userId {
+                parameters = ["email":email,"google_token":google_token,"google_userId":google_userId]
             } else if let linkedin_token = linkedin_token {
                 parameters = ["email":email,"linkedin_token":linkedin_token]
             } else {
@@ -70,14 +70,14 @@ class SFNetworkManager {
          *   - linkedin_token: if logging in via Linkedin
          *   - completion: error(if exists) and value(response object: -> SFUser)
          */
-        class func post(email: String, password: String?, fb_token: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, completion: @escaping(_ error:String?, _ user:SFUser?) ->()) {
+        class func post(email: String, password: String?, fb_userId: String? = nil, google_userId: String? = nil, linkedin_token: String? = nil, completion: @escaping(_ error:String?, _ user:SFUser?) ->()) {
             let parameters: Parameters!
             if let password = password {
                 parameters = ["email":email,"password":password]
-            } else if let fb_token = fb_token {
-                parameters = ["email":email,"fb_token":fb_token]
-            } else if let google_token = google_token {
-                parameters = ["email":email,"google_token":google_token]
+            } else if let fb_userId = fb_userId {
+                parameters = ["email":email,"fb_userId":fb_userId]
+            } else if let google_userId = google_userId {
+                parameters = ["email":email,"google_userId":google_userId]
             } else if let linkedin_token = linkedin_token {
                 parameters = ["email":email,"linkedin_token":linkedin_token]
             } else {

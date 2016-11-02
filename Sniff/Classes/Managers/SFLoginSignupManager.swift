@@ -10,6 +10,7 @@ import Foundation
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Google
+import SwiftyJSON
 
 class SFGeneralManager {
     
@@ -24,20 +25,20 @@ class SFGeneralManager {
                     SFHud.showLoading()
                     let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email"])
                     graphRequest.start(completionHandler: { (connection, result, error) -> Void in
-                        var email: String? = nil
                         if let result = result as? NSDictionary {
                             if let emailAddress = result["email"] as? String {
-                                email = emailAddress
+                                if let fb_userId = result["id"] as? String {
+                                    if isLogin == true {
+                                        performLogin(email: emailAddress, fb_userId:fb_userId, fb_token: token, google_userId:nil, google_token: nil, linkedin_token: nil, password: nil, completion: { (error) in
+                                            completion(error)
+                                        })
+                                    } else {
+                                        performSignUp(email: emailAddress, fb_userId: fb_userId, google_userId: nil, linkedin_token: nil, password: nil, completion: { (error) in
+                                            completion(error)
+                                        })
+                                    }
+                                }
                             }
-                        }
-                        if isLogin == true {
-                            performLogin(email: email, fb_token: token, google_token: nil, linkedin_token: nil, password: nil, completion: { (error) in
-                                completion(error)
-                            })
-                        } else {
-                            performSignUp(email: email, fb_token: token, google_token: nil, linkedin_token: nil, password: nil, completion: { (error) in
-                                completion(error)
-                            })
                         }
                     })
                 }
@@ -46,17 +47,38 @@ class SFGeneralManager {
 
         //MARK: - Linkedin
         class func onLinkedinBtnClicked(isLogin login:Bool, completion:@escaping (_ error:String?)->()) {
-            LISDKSessionManager.createSession(withAuth: [LISDK_BASIC_PROFILE_PERMISSION], state: nil, showGoToAppStoreDialog: true, successBlock: { (returnState) -> Void in
+            LISDKSessionManager.createSession(withAuth: [LISDK_EMAILADDRESS_PERMISSION as AnyObject], state: nil, showGoToAppStoreDialog: true, successBlock: { (returnState) -> Void in
                 guard let session = LISDKSessionManager.sharedInstance().session else { return }
                 SFHud.showLoading()
                 let token = session.accessToken.accessTokenValue
-                if login == true {
-                    performLogin(email: nil, fb_token: nil, google_token: nil, linkedin_token: token, password: nil, completion: { (error) in
-                        completion(error)
-                    })
-                } else {
-                    performSignUp(email: nil, fb_token: nil, google_token: nil, linkedin_token: token, password: nil, completion: { (error) in
-                        completion(error)
+                
+                let url = NSString(string:"https://api.linkedin.com/v1/people/~:(id,industry,firstName,lastName,emailAddress,headline,summary,publicProfileUrl,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),pictureUrls::(original),location:(name))?format=json")
+                if LISDKSessionManager.hasValidSession() {
+                    LISDKAPIHelper.sharedInstance().getRequest(url as String, success: {
+                        response in
+                        DispatchQueue.main.async {
+                            if let dataFromString = response?.data.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                                let result = JSON(data: dataFromString)
+                                LISDKSessionManager.clearSession()
+                                let email = result["emailAddress"].description
+                                if login == true {
+                                    performLogin(email: email, fb_userId:nil, fb_token: nil, google_userId:nil, google_token: nil, linkedin_token: token, password: nil, completion: { (error) in
+                                        completion(error)
+                                    })
+                                } else {
+                                    performSignUp(email: nil, fb_userId:nil, google_userId: nil, linkedin_token: token, password: nil, completion: { (error) in
+                                        completion(error)
+                                    })
+                                }
+                            }
+                        }
+                    }, error: {
+                        error in
+                        
+                        LISDKAPIHelper.sharedInstance().cancelCalls()
+                        LISDKSessionManager.clearSession()
+                        completion(error?.localizedDescription)
+                        //Do something with the error
                     })
                 }
                 
@@ -69,11 +91,11 @@ class SFGeneralManager {
             SFHud.showLoading()
             let token = user.authentication.idToken, email = user.profile.email
             if login == true {
-                performLogin(email: email, fb_token: nil, google_token: token, linkedin_token: nil, password: nil, completion: { (error) in
+                performLogin(email: email, fb_userId:nil, fb_token: nil, google_userId:user.userID, google_token: token, linkedin_token: nil, password: nil, completion: { (error) in
                     completion(error)
                 })
             } else {
-                performSignUp(email: email, fb_token: nil, google_token: token, linkedin_token: nil, password: nil, completion: { (error) in
+                performSignUp(email: email, fb_userId:nil, google_userId: user.userID, linkedin_token: nil, password: nil, completion: { (error) in
                     completion(error)
                 })
             }
@@ -81,9 +103,9 @@ class SFGeneralManager {
         }
         
         //MARK: - Perform Login
-        class func performLogin(email:String?, fb_token: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, password: String?, completion:@escaping (_ error:String?)->()) {
-            if email != nil && (password != nil || fb_token != nil || google_token != nil || linkedin_token != nil) {
-                SFNetworkManager.Login.post(email: email!, password: password, fb_token: fb_token, google_token: google_token, linkedin_token: linkedin_token, completion: { (error, user) in
+        class func performLogin(email:String?, fb_userId: String? = nil, fb_token: String? = nil, google_userId: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, password: String?, completion:@escaping (_ error:String?)->()) {
+            if email != nil && (password != nil || (fb_userId != nil && fb_token != nil) || (google_userId != nil && google_token != nil) || linkedin_token != nil) {
+                SFNetworkManager.Login.post(email: email!, password: password, fb_userId: fb_userId, fb_token: fb_token, google_userId: google_userId, google_token: google_token, linkedin_token: linkedin_token, completion: { (error, user) in
                     SFHud.dismissLoading()
                     guard error == nil else {
                         completion(error)
@@ -104,9 +126,9 @@ class SFGeneralManager {
         }
         
         //MARK: - Perform SignUp
-        class func performSignUp(email:String?, fb_token: String? = nil, google_token: String? = nil, linkedin_token: String? = nil, password: String?, completion:@escaping (_ error:String?)->()) {
-            if email != nil && (password != nil || fb_token != nil || google_token != nil || linkedin_token != nil) {
-                SFNetworkManager.SignUp.post(email: email!, password: password, fb_token: fb_token, google_token: google_token, linkedin_token: linkedin_token, completion: { (error, user) in
+        class func performSignUp(email:String?, fb_userId: String? = nil, google_userId: String? = nil, linkedin_token: String? = nil, password: String?, completion:@escaping (_ error:String?)->()) {
+            if email != nil && (password != nil || fb_userId != nil || google_userId != nil || linkedin_token != nil) {
+                SFNetworkManager.SignUp.post(email: email!, password: password, fb_userId: fb_userId, google_userId: google_userId, linkedin_token: linkedin_token, completion: { (error, user) in
                     SFHud.dismissLoading()
                     guard error == nil else {
                         completion(error)
